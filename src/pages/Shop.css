@@ -1,0 +1,50 @@
+.shop-page {
+  padding: 1rem;
+  background-color: #fffdf6;
+  min-height: 100vh;
+}
+
+.shop-page h2 {
+  text-align: center;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 280px));
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.special-offers {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.offer-box {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.offer-box h3 {
+  color: #2e7d32;
+  margin-bottom: 0.75rem;
+}
+
+.offer-code {
+  background: #f0fff4;
+  color: #2e7d32;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* No need for media queries as auto-fit will handle responsiveness */

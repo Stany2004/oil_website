@@ -1,0 +1,23 @@
+:root {
+
+  /* Content Spacing */
+  --mostRelated: 4px;
+  --closelyRelated: 8px;
+  --semiRelated: 16px;
+  --lessRelated: 24px;
+
+  /* Font Sizes */
+  --paragraph: 1rem;
+  --largeParagraph: 1.25rem;
+  --smallSubheading: 1.5rem;
+  --mediumSubheading: 1.75rem;
+  --largeSubheading: 2rem;
+  --extraLargeSubheading: 2.25rem;
+  --extraSmallHeading: 2.5rem;
+  --smallHeading: 2.75rem;
+  --mediumHeading: 3rem;
+  --largeHeading: 3.25rem;
+  --smallDisplay: 3.5rem;
+  --mediumDisplay: 3.75rem;
+  --largeDisplay: 4rem;
+}

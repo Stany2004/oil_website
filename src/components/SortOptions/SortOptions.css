@@ -1,0 +1,165 @@
+.sort-options-container {
+  position: relative;
+  z-index: 100;
+  margin: 1.5rem 0;
+}
+
+.sort-options {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.sort-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #4a5568;
+  transition: all 0.2s ease;
+}
+
+.sort-button:hover {
+  border-color: #2e7d32;
+  color: #2e7d32;
+}
+
+.sort-button.active {
+  border-color: #2e7d32;
+  color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.sort-icon {
+  display: flex;
+  align-items: center;
+}
+
+.sort-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+}
+
+.sort-text {
+  color: #718096;
+}
+
+.selected-option {
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.chevron-icon {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.chevron-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.chevron-icon.open {
+  transform: rotate(180deg);
+}
+
+.sort-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  width: 220px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  animation: slideIn 0.2s ease;
+}
+
+.sort-option {
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: none;
+  color: #4a5568;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.sort-option:hover {
+  background-color: #f7fafc;
+  color: #2e7d32;
+}
+
+.sort-option.selected {
+  background-color: #f0fff4;
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .sort-options-container {
+    margin: 1rem 0;
+  }
+
+  .sort-button {
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .sort-text {
+    display: none;
+  }
+
+  .sort-dropdown {
+    width: 200px;
+  }
+
+  .sort-option {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Styling for the product grid when sorted */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+  align-items: start;
+}
+
+.product-card {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}

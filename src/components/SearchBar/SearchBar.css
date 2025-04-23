@@ -1,0 +1,96 @@
+.search-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-bar:hover {
+  border-color: #cbd5e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.search-container.focused .search-bar {
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  color: #718096;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #2d3748;
+  background: transparent;
+  padding: 0;
+  width: 100%;
+}
+
+.search-bar input::placeholder {
+  color: #a0aec0;
+  font-size: 0.95rem;
+}
+
+.clear-button {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.clear-button:hover {
+  background-color: #f7fafc;
+}
+
+.clear-button svg {
+  width: 16px;
+  height: 16px;
+  color: #a0aec0;
+  transition: color 0.2s ease;
+}
+
+.clear-button:hover svg {
+  color: #718096;
+}
+
+@media (max-width: 640px) {
+  .search-container {
+    margin: 1rem auto;
+  }
+  
+  .search-bar {
+    padding: 0.625rem 0.875rem;
+  }
+
+  .search-bar input {
+    font-size: 0.95rem;
+  }
+
+  .search-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
